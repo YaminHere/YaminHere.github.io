@@ -1,0 +1,26 @@
+[
+  {
+    "title": "The Future Project",
+    "category": "creatives",
+    "images": [
+      "https://res.cloudinary.com/deqidbavz/image/upload/v1720026239/img1_msoeyj.jpg",
+      "https://res.cloudinary.com/deqidbavz/image/upload/v1720026239/img2_mt3ovz.jpg"
+    ]
+  },
+  {
+    "title": "Finance",
+    "category": "web development",
+    "images": [
+      "https://res.cloudinary.com/deqidbavz/image/upload/v1720026239/img1_msoeyj.jpg",
+      "https://res.cloudinary.com/deqidbavz/image/upload/v1720026239/img2_mt3ovz.jpg"
+    ]
+  },
+  {
+    "title": "Finance",
+    "category": "applications",
+    "images": [
+      "https://res.cloudinary.com/deqidbavz/image/upload/v1720026239/img1_msoeyj.jpg",
+      "https://res.cloudinary.com/deqidbavz/image/upload/v1720026239/img2_mt3ovz.jpg"
+    ]
+  }
+]
