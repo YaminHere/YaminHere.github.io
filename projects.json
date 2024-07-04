@@ -19,6 +19,12 @@
     "category": "creatives",
     "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720086791/brochure_copy-1_gixmzk.jpg",
     "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720086791/brochure_copy-2_zers0k.jpg"]
+  },
+  {
+    "title": "Brochure-My Santa",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720086791/brochure_copy-1_gixmzk.jpg",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720086791/brochure_copy-2_zers0k.jpg"]
   }
   
 ]
