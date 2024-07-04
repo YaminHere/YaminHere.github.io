@@ -25,7 +25,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
  
   <!-- Include Fancybox CSS -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
     
  <!-- Include jQuery -->
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -727,7 +727,7 @@
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Web design</button>
+              <button data-filter-btn>Creatives</button>
             </li>
 
             <li class="filter-item">
@@ -759,41 +759,25 @@
               </li>
 
               <li class="select-item">
-                <button data-select-item>Web design</button>
+                <button data-select-item>applications</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Applications</button>
+                <button data-select-item>web development</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Web development</button>
+                <button data-select-item>creatives</button>
               </li>
+
+              
 
             </ul>
 
           </div>
 
-          <ul class="project-list">
-            <!-- Project 1 -->
-            <li class="project-item active" data-filter-item data-category="web development">
-                <a data-fancybox="gallery1" href="./assets/images/project-1.jpg">
-                    <figure class="project-img">
-                        <div class="project-item-icon-box">
-                            <ion-icon name="eye-outline"></ion-icon>
-                        </div>
-                        <img src="https://drive.google.com/uc?export=view&id=1H9k1JsO6s8hhlfozB-beJ8dhPD-gl_z3" alt="finance" loading="lazy">
-                    </figure>
-                    <figcaption>
-                      <h3 class="project-title">Finance</h3>
-                      <p class="project-category">Web development</p>
-                  </figcaption>
-                </a>
-                <!-- Additional images for Project 1 -->
-                <a data-fancybox="gallery1" href="https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_2" style="display:none;"></a>
-                <a data-fancybox="gallery1" href="https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_3" style="display:none;"></a>
-            </li>
-
+          <ul class="project-list" id="project-list">
+            <!-- Projects will be loaded here dynamically -->
           </ul>
 
         </section>
@@ -1085,6 +1069,44 @@
           });
       });
   </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<script>
+  // Fetch and display projects
+  fetch('./projects.json')
+    .then(response => response.json())
+    .then(projects => {
+      const projectList = document.getElementById('project-list');
+      projectList.innerHTML = projects.map(project => `
+        <li class="project-item active" data-filter-item data-category="${project.category}">
+          <a data-fancybox="gallery1" href="${project.images[0]}">
+            <figure class="project-img">
+              <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+              <img src="${project.images[0]}" alt="${project.title}" loading="lazy">
+            </figure>
+            <figcaption>
+              <h3 class="project-title">${project.title}</h3>
+              <p class="project-category">${project.category}</p>
+            </figcaption>
+          </a>
+          ${project.images.slice(1).map(image => `<a data-fancybox="gallery2" href="${image}" style="display:none;"></a>`).join('')}
+        </li>
+      `).join('');
+    });
+
+  // Filter functionality
+  document.querySelectorAll('[data-filter-btn]').forEach(button => {
+    button.addEventListener('click', () => {
+      const category = button.textContent.toLowerCase();
+      document.querySelectorAll('[data-filter-item]').forEach(item => {
+        item.style.display = category === 'all' || item.dataset.category === category ? 'block' : 'none';
+      });
+      document.querySelectorAll('[data-filter-btn]').forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+    });
+  });
+</script>
 
 </body>
 
