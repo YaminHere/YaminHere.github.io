@@ -2,25 +2,23 @@
   {
     "title": "The Future Project",
     "category": "creatives",
-    "images": [
-      "https://res.cloudinary.com/deqidbavz/image/upload/v1720026239/img1_msoeyj.jpg",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720026239/img1_msoeyj.jpg",
+    "additionalImages": [
       "https://res.cloudinary.com/deqidbavz/image/upload/v1720026239/img2_mt3ovz.jpg"
     ]
   },
   {
-    "title": "Finance",
-    "category": "web development",
-    "images": [
-      "https://res.cloudinary.com/deqidbavz/image/upload/v1720026239/img1_msoeyj.jpg",
-      "https://res.cloudinary.com/deqidbavz/image/upload/v1720026239/img2_mt3ovz.jpg"
-    ]
+    "title": "Women's Day",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720086624/women_day-03_f9fsau.jpg",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720086624/women_day-04_vzji67.jpg"]
   },
+
   {
-    "title": "Finance",
-    "category": "applications",
-    "images": [
-      "https://res.cloudinary.com/deqidbavz/image/upload/v1720026239/img1_msoeyj.jpg",
-      "https://res.cloudinary.com/deqidbavz/image/upload/v1720026239/img2_mt3ovz.jpg"
-    ]
+    "title": "Brochure-My Santa",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720086791/brochure_copy-1_gixmzk.jpg",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720086791/brochure_copy-1_gixmzk.jpg"]
   }
+  
 ]
