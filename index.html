@@ -731,11 +731,19 @@
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Applications</button>
+              <button data-filter-btn>Branding</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Web development</button>
+              <button data-filter-btn>Webdesign</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Content</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Illustrations</button>
             </li>
 
           </ul>
@@ -759,17 +767,24 @@
               </li>
 
               <li class="select-item">
-                <button data-select-item>applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>web development</button>
+                <button data-select-item>branding</button>
               </li>
 
               <li class="select-item">
                 <button data-select-item>creatives</button>
               </li>
 
+              <li class="select-item">
+                <button data-select-item>webdesign</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>illustrations</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>content</button>
+              </li>
               
 
             </ul>
@@ -1049,64 +1064,86 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-     <!-- Initialize Fancybox -->
-     <script>
-      $(document).ready(function() {
-          $('[data-fancybox]').fancybox({
-              // Custom Fancybox settings
-              loop: true, // Enable looping through images
-              buttons: [
-                  "zoom",
-                  "share",
-                  "slideShow",
-                  "fullScreen",
-                  "download",
-                  "thumbs",
-                  "close"
-              ],
-              animationEffect: "zoom-in-out", // Animation effect
-              transitionEffect: "slide" // Transition effect between images
-          });
-      });
-  </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-
+  <!-- Initialize Fancybox -->
 <script>
-  // Fetch and display projects
-  fetch('./projects.json')
-    .then(response => response.json())
-    .then(projects => {
-      const projectList = document.getElementById('project-list');
-      projectList.innerHTML = projects.map(project => `
-        <li class="project-item active" data-filter-item data-category="${project.category}">
-          <a data-fancybox="gallery-${project.title}" href="${project.thumbnail}">
-            <figure class="project-img">
-              <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
-              <img src="${project.thumbnail}" alt="${project.title}" loading="lazy">
-            </figure>
-            <figcaption>
-              <h3 class="project-title">${project.title}</h3>
-              <p class="project-category">${project.category}</p>
-            </figcaption>
-          </a>
-          ${project.additionalImages.map(image => `<a data-fancybox="gallery-${project.title}" href="${image}" style="display:none;"></a>`).join('')}
-        </li>
-      `).join('');
-    });
-
-  // Filter functionality
-  document.querySelectorAll('[data-filter-btn]').forEach(button => {
-    button.addEventListener('click', () => {
-      const category = button.textContent.toLowerCase();
-      document.querySelectorAll('[data-filter-item]').forEach(item => {
-        item.style.display = category === 'all' || item.dataset.category === category ? 'block' : 'none';
+  $(document).ready(function() {
+      $('[data-fancybox]').fancybox({
+          // Custom Fancybox settings
+          loop: true, // Enable looping through images
+          buttons: [
+              "zoom",
+              "share",
+              "slideShow",
+              "fullScreen",
+              "thumbs",
+              "close"
+          ],
+          animationEffect: "zoom-in-out", // Animation effect
+          transitionEffect: "slide" // Transition effect between images
       });
-      document.querySelectorAll('[data-filter-btn]').forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-    });
   });
 </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    function fetchAndDisplayProjects() {
+      fetch('./projects.json')
+        .then(response => response.json())
+        .then(projects => {
+          const projectList = document.getElementById('project-list');
+          projectList.innerHTML = projects.map(project => `
+            <li class="project-item active" data-filter-item data-category="${project.category}">
+              <a data-fancybox="gallery-${project.title.replace(/\s+/g, '-').toLowerCase()}" href="${project.thumbnail}">
+                <figure class="project-img">
+                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                  <img src="${project.thumbnail}" alt="${project.title}" loading="lazy">
+                </figure>
+                <figcaption>
+                  <h3 class="project-title">${project.title}</h3>
+                  <p class="project-category">${project.category}</p>
+                </figcaption>
+              </a>
+              ${project.additionalImages.map(image => `
+                <a data-fancybox="gallery-${project.title.replace(/\s+/g, '-').toLowerCase()}" href="${image}" style="display:none;"></a>
+              `).join('')}
+            </li>
+          `).join('');
+
+          // Initialize Fancybox
+          $("[data-fancybox]").fancybox({
+            loop: true,
+            buttons: [
+              "zoom",
+              "share",
+              "slideShow",
+              "fullScreen",
+              "download",
+              "thumbs",
+              "close"
+            ],
+            animationEffect: "zoom-in-out",
+            transitionEffect: "slide"
+          });
+        });
+    }
+
+    fetchAndDisplayProjects();
+
+    // Filter functionality
+    document.querySelectorAll('[data-filter-btn]').forEach(button => {
+      button.addEventListener('click', () => {
+        const category = button.textContent.toLowerCase();
+        document.querySelectorAll('[data-filter-item]').forEach(item => {
+          item.style.display = category === 'all' || item.dataset.category === category ? 'block' : 'none';
+        });
+        document.querySelectorAll('[data-filter-btn]').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+      });
+    });
+  });
+
+</script>
+
 
 </body>
 
