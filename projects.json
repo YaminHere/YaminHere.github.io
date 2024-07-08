@@ -187,7 +187,9 @@
     "title": "Logo-Geocor",
     "category": "branding",
     "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720172243/WEB_ON_DARK_-01_v6uztd.jpg",
-    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720172245/WEB_ON_DARK_-02_slk0gq.jpg"]
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720172245/WEB_ON_DARK_-02_slk0gq.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720200190/Untitled-2-01_tbvk1g.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720200189/Untitled-2-02_rqecps.jpg"]
   },
   {
     "title": "Logo-Phoenix Packaging",
@@ -200,7 +202,75 @@
     "category": "branding",
     "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720172532/ROOT_CARD-01_e0zbho.png",
     "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720172530/ROOT_CARD-02_d4enye.png"]
+  },
+  {
+    "title": "Making a kite",
+    "category": "illustrations & content",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720199805/Untitled-2-01_1_jsue5c.jpg",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720199804/Untitled-2-02_1_v4uhok.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720199804/Untitled-2-03_tuadiq.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720199862/Untitled-2-04_sbkc8i.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720199862/Untitled-2-05_dp5ptm.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720199804/Untitled-2-06_t2ei3z.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720199804/Untitled-2-07_whmyyc.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720199805/Untitled-2-08_wpv52f.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720199804/Untitled-2-09_jonta8.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720199805/Untitled-2-10_qjocgt.jpg"]
+  },
+  {
+    "title": "Clouds",
+    "category": "illustrations & content",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720200146/p6_peay4x.png",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720200147/p4_hcvgik.png",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720200147/p3_iiy0xm.png"]
+  },
+  {
+    "title": "Project-COF",
+    "category": "illustrations & content",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720199896/1x1_evrfyt.jpg",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720199898/Momento_A3-01_wbvflx.jpg"]
+  },
+  {
+    "title": "Icons-Deck",
+    "category": "illustrations & content",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720200682/deck-02_bb8alt.png",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720200683/deck-01_jl7vyq.png"]
+  },
+  {
+    "title": "Rang",
+    "category": "illustrations & content",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720199928/rang_2782_zzpory.jpg",
+    "additionalImages": []
+  },
+  {
+    "title": "Natpat",
+    "category": "illustrations & content",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720256884/natpat_page-0001_ucieeq.jpg",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720256883/natpat_page-0002_iphcvd.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720256883/natpat_page-0003_glzjy3.jpg",
+"https://res.cloudinary.com/deqidbavz/image/upload/v1720256883/natpat_page-0004_mwktgg.jpg",
+"https://res.cloudinary.com/deqidbavz/image/upload/v1720256886/natpat_page-0006_gaablu.jpg",
+"https://res.cloudinary.com/deqidbavz/image/upload/v1720256884/natpat_page-0005_ntzpzb.jpg",
+"https://res.cloudinary.com/deqidbavz/image/upload/v1720256947/natpat_page-0007_mhhbxh.jpg",
+"https://res.cloudinary.com/deqidbavz/image/upload/v1720256883/natpat_page-0008_qotifk.jpg",
+"https://res.cloudinary.com/deqidbavz/image/upload/v1720256884/natpat_page-0009_qcqtnr.jpg"]
+  },
+  {
+    "title": "Product features",
+    "category": "webdesign",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720258086/Frame_48096365_mmzxjh.png",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720258086/Frame_48096404_thmpld.png",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720258086/Frame_48096368_qqfjfl.png",
+"https://res.cloudinary.com/deqidbavz/image/upload/v1720258087/Frame_48096371_j1ahxk.png",
+"https://res.cloudinary.com/deqidbavz/image/upload/v1720260209/framepf_1_wvwuvm.jpg"]
+  },
+  {
+    "title": "Rang",
+    "category": "branding",
+    "thumbnail": "https://res.cloudindss.com/deqidbavz/image/upload/v1720172532/ROOT_CARD-01_e0zbho.png",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720172530/ROOT_CARD-02_d4enye.png"]
   }
+
 
 ]
 
