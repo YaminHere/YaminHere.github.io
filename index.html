@@ -185,16 +185,17 @@
 
         <ul class="navbar-list">
 
+          
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
+            <button class="navbar-link active" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>About</button>
           </li>
 
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
           </li>
 
           <li class="navbar-item">
@@ -210,6 +211,89 @@
       </nav>
 
 
+<!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio active" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Creatives</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Branding</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Webdesign</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Illustrations & Content</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>branding</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>creatives</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>webdesign</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>illustrations & content</button>
+              </li>
+              
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list" id="project-list">
+            <!-- Projects will be loaded here dynamically -->
+          </ul>
+
+        </section>
+
+      </article>
+
 
 
 
@@ -217,7 +301,7 @@
         - #ABOUT
       -->
 
-      <article class="about  active" data-page="about">
+      <article class="about" data-page="about">
 
         <header>
           <h2 class="h2 article-title">About me</h2>
@@ -703,94 +787,6 @@
         </section>
 
       </article>
-
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Creatives</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Branding</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Webdesign</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Illustrations & Content</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>branding</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>creatives</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>webdesign</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>illustrations & content</button>
-              </li>
-              
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list" id="project-list">
-            <!-- Projects will be loaded here dynamically -->
-          </ul>
-
-        </section>
-
-      </article>
-
 
 
 
