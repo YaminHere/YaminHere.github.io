@@ -1,194 +1,274 @@
-'use strict';
+[
+  {
+    "title": "The Future Project",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720026239/img1_msoeyj.jpg",
+    "additionalImages": [
+      "https://res.cloudinary.com/deqidbavz/image/upload/v1720026239/img2_mt3ovz.jpg"
+    ]
+  },
+  {
+    "title": "Women's Day",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720086624/women_day-03_f9fsau.jpg",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720086624/women_day-04_vzji67.jpg"]
+  },
 
-
-
-// element toggle function
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
-
-
-
-// sidebar variables
-const sidebar = document.querySelector("[data-sidebar]");
-const sidebarBtn = document.querySelector("[data-sidebar-btn]");
-
-// sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
-
-
-
-// testimonials variables
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
-const modalContainer = document.querySelector("[data-modal-container]");
-const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
-const overlay = document.querySelector("[data-overlay]");
-
-// modal variable
-const modalImg = document.querySelector("[data-modal-img]");
-const modalTitle = document.querySelector("[data-modal-title]");
-const modalText = document.querySelector("[data-modal-text]");
-
-// modal toggle function
-const testimonialsModalFunc = function () {
-  modalContainer.classList.toggle("active");
-  overlay.classList.toggle("active");
-}
-
-// add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
-
-  testimonialsItem[i].addEventListener("click", function () {
-
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-
-    testimonialsModalFunc();
-
-  });
-
-}
-
-// add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
-
-
-
-// custom select variables
-const select = document.querySelector("[data-select]");
-const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]");
-const filterBtn = document.querySelectorAll("[data-filter-btn]");
-
-select.addEventListener("click", function () { elementToggleFunc(this); });
-
-// add event in all select items
-for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    elementToggleFunc(select);
-    filterFunc(selectedValue);
-
-  });
-}
-
-// filter variables
-const filterItems = document.querySelectorAll("[data-filter-item]");
-
-const filterFunc = function (selectedValue) {
-
-  for (let i = 0; i < filterItems.length; i++) {
-
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
-    } else {
-      filterItems[i].classList.remove("active");
-    }
-
+  {
+    "title": "Brochure-My Santa",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720086791/brochure_copy-1_gixmzk.jpg",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720086791/brochure_copy-2_zers0k.jpg"]
+  },
+  {
+    "title": "Happy New Year",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720087170/NEW_YEAR-01_ot5zrq.jpg",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720087175/NEW_YEAR-05_uloxzw.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720087178/NEW_YEAR-06_dyiklp.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720087180/NEW_YEAR-02_wfiro8.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720087171/NEW_YEAR-07_oqcu7o.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720087168/NEW_YEAR-09_qlhjh9.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720087167/NEW_YEAR-08_wymdkd.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720087184/NEW_YEAR-03_gms2bq.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720087173/NEW_YEAR-04_iqfb9b.jpg"]
+  },
+  {
+    "title": "InHisRemebrance",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720087583/pele_i5oedk.jpg",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720087584/innocent-01_vtnqbr.jpg"]
+  },
+  {
+    "title": "My Santa",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720086840/santa3-01_1_zezqii.jpg",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720086842/mainpos-01_ymw5ff.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720086841/santa3-02_ewjzqe.jpg"]
+  },
+  {
+    "title": "Cover-TFP",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720162835/DESIGN-01_l2j32d.jpg",
+    "additionalImages": []
+  },
+  {
+    "title": "Projects-TFP",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720086669/kites_tfp-20230729-0003_zzcyzm.jpg",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720086669/kites_tfp-20230729-0004_ia9fct.jpg"]
+  },
+  {
+    "title": "Internship-TFP",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720086670/kites_tfp-20230729-0001_ydo7hk.jpg",
+    "additionalImages": []
+  },
+  {
+    "title": "Happy Diwali",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720087667/diwali-06_dljlbu.png",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720087667/diwali-05_dg93fn.png"]
+  },
+  {
+    "title": "Awards-FILM",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720087326/film_ubtfwt.jpg",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720087326/director_v9pnx8.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720087324/actor_n9d9qt.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720087326/actress_rwh2th.jpg"]
+  },
+  {
+    "title": "Banner-Quiz",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720087232/2_owlw3d.png",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720087234/1_vxijm8.png"]
+  },
+  {
+    "title": "RDX",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720087385/rdx60cross_vogewt.jpg",
+    "additionalImages": []
+  },
+  {
+    "title": "Promo-RDX",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720087412/Prptmetric-03_frci3m.jpg",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720087413/Prptmetricfin2_lhkgzp.jpg"]
+  },
+  {
+    "title": "Quiz Contest",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720087413/rdxonlinepost2_ajf4td.jpg",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720087415/rdxonline9x16_k6o1sk.jpg"]
+  },
+  {
+    "title": "Card-ROOt",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720087733/70815_jwzmdz.png",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720087731/Frame_48095698sds_zgy3di.png",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720087730/Frame_48095699_b9c7ag.png",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720087729/70816_ve7vmk.png"]
+  },
+  {
+    "title": "Partners Onboarding",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720125022/Frame_5_x4inhk.jpg",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720125026/Frame_23_tuvlvh.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720125023/Frame_19_nfvnpj.jpg"]
+  },
+  {
+    "title": "Product features",
+    "category": "webdesign",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720258086/Frame_48096365_mmzxjh.png",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720258086/Frame_48096404_thmpld.png",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720258086/Frame_48096368_qqfjfl.png",
+"https://res.cloudinary.com/deqidbavz/image/upload/v1720258087/Frame_48096371_j1ahxk.png",
+"https://res.cloudinary.com/deqidbavz/image/upload/v1720260209/framepf_1_wvwuvm.jpg"]
+  },
+  {
+    "title": "Making a kite",
+    "category": "illustrations & content",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720199805/Untitled-2-01_1_jsue5c.jpg",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720199804/Untitled-2-02_1_v4uhok.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720199804/Untitled-2-03_tuadiq.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720199862/Untitled-2-04_sbkc8i.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720199862/Untitled-2-05_dp5ptm.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720199804/Untitled-2-06_t2ei3z.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720199804/Untitled-2-07_whmyyc.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720199805/Untitled-2-08_wpv52f.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720199804/Untitled-2-09_jonta8.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720199805/Untitled-2-10_qjocgt.jpg"]
+  },
+  {
+    "title": "Agrigram",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720087540/coming_soon-03_egewkz.jpg",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720087541/Agrigram_icon-01_jiqfmx.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720087540/agrigram-01_ikgrst.jpg"]
+  },
+  {
+    "title": "Volunteer Drive",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720086902/Untitled-3-06_q0o8kz.jpg",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720086897/Untitled-3-02_oaytfs.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720086901/Untitled-3-05_haaiqc.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720086906/Untitled-3-07_y4dy62.jpg"]
+  },
+  {
+    "title": "23 for 23",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720086751/23for23-02_xvscn2.jpg",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720086751/23end-01_hbvoyz.jpg"]
+  },
+  {
+    "title": "Lakshmi's Idea",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720161205/lakshmi_s_idea_s-01_zlefhw.jpg",
+    "additionalImages": []
+  },
+  {
+    "title": "Artist Community",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720161186/acpos-01_ti9b9r.jpg",
+    "additionalImages": []
+  },
+  {
+    "title": "Natpat",
+    "category": "illustrations & content",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720256884/natpat_page-0001_ucieeq.jpg",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720256883/natpat_page-0002_iphcvd.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720256883/natpat_page-0003_glzjy3.jpg",
+"https://res.cloudinary.com/deqidbavz/image/upload/v1720256883/natpat_page-0004_mwktgg.jpg",
+"https://res.cloudinary.com/deqidbavz/image/upload/v1720256886/natpat_page-0006_gaablu.jpg",
+"https://res.cloudinary.com/deqidbavz/image/upload/v1720256884/natpat_page-0005_ntzpzb.jpg",
+"https://res.cloudinary.com/deqidbavz/image/upload/v1720256947/natpat_page-0007_mhhbxh.jpg",
+"https://res.cloudinary.com/deqidbavz/image/upload/v1720256883/natpat_page-0008_qotifk.jpg",
+"https://res.cloudinary.com/deqidbavz/image/upload/v1720256884/natpat_page-0009_qcqtnr.jpg"]
+  },
+  {
+    "title": "Review Card",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720161572/Frame_39_mkqw53.png",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720166328/Frame_40_tmlsfn.png"]
+  },
+  {
+    "title": "Roger Ferderer",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720161596/roger_fed_Edited_sjh4xt.jpg",
+    "additionalImages": []
+  },
+  {
+    "title": "Character Temp",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720087384/shammi_wxnzc2.jpg",
+    "additionalImages": []
+  },
+  {
+    "title": "Brochure-TFP",
+    "category": "creatives",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720124541/tfp_tflm3o.jpg",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720087050/brochure_b-01_jke7uy.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720087049/brochure_b-02_k2luys.jpg"]
+  },
+  {
+    "title": "Logo-TFP",
+    "category": "branding",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720161951/TFP_Logo-BSQ_nsvgfp.jpg",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720161952/TFP_Logo-WSQ_yosan7.jpg"]
+  },
+  {
+    "title": "Logo-Geocor",
+    "category": "branding",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720172243/WEB_ON_DARK_-01_v6uztd.jpg",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720172245/WEB_ON_DARK_-02_slk0gq.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720200190/Untitled-2-01_tbvk1g.jpg",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720200189/Untitled-2-02_rqecps.jpg"]
+  },
+  {
+    "title": "Logo-Phoenix Packaging",
+    "category": "branding",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720172438/Logo_PhoenixPs_c2ejbh.jpg",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720172439/Logo_PhoenixPs-02_pgocm2.png"]
+  },
+  {
+    "title": "Crew Card",
+    "category": "branding",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720172532/ROOT_CARD-01_e0zbho.png",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720172530/ROOT_CARD-02_d4enye.png"]
+  },
+  {
+    "title": "Clouds",
+    "category": "illustrations & content",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720200146/p6_peay4x.png",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720200147/p4_hcvgik.png",
+  "https://res.cloudinary.com/deqidbavz/image/upload/v1720200147/p3_iiy0xm.png"]
+  },
+  {
+    "title": "Project-COF",
+    "category": "illustrations & content",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720199896/1x1_evrfyt.jpg",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720199898/Momento_A3-01_wbvflx.jpg"]
+  },
+  {
+    "title": "Icons-Deck",
+    "category": "illustrations & content",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720200682/deck-02_bb8alt.png",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720200683/deck-01_jl7vyq.png"]
+  },
+  {
+    "title": "Rang",
+    "category": "illustrations & content",
+    "thumbnail": "https://res.cloudinary.com/deqidbavz/image/upload/v1720199928/rang_2782_zzpory.jpg",
+    "additionalImages": []
+  },
+  {
+    "title": "Rang",
+    "category": "branding",
+    "thumbnail": "https://res.cloudindss.com/deqidbavz/image/upload/v1720172532/ROOT_CARD-01_e0zbho.png",
+    "additionalImages": ["https://res.cloudinary.com/deqidbavz/image/upload/v1720172530/ROOT_CARD-02_d4enye.png"]
   }
 
-}
 
-// add event in all filter button items for large screen
-let lastClickedBtn = filterBtn[0];
+]
 
-for (let i = 0; i < filterBtn.length; i++) {
-
-  filterBtn[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    filterFunc(selectedValue);
-
-    lastClickedBtn.classList.remove("active");
-    this.classList.add("active");
-    lastClickedBtn = this;
-
-  });
-
-}
-
-
-
-// contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
-
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
-
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
-
-  });
-}
-
-
-
-// page navigation variables
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
-
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
-      }
-    }
-
-  });
-}
-
-// Add event listener to project container
-const projectListEl = document.querySelector(".project-list");
-const openProjectImgs = projectListEl.querySelectorAll(".project-img");
-const modalDialogEl = document.querySelector("dialog");
-const closeModalDialogEl = document.querySelector("#close");
-const modalImgEl = document.querySelector(".modal-body > img");
-
-// adding click event on every project
-for (let i = 0; i < openProjectImgs.length; i++) {
-  const openProjectImgEl = openProjectImgs[i];
-  openProjectImgEl
-    .querySelector(".project-item-icon-box")
-    .addEventListener("click", () => {
-      modalImgEl.src = openProjectImgEl.querySelector("img").src;
-      modalDialogEl.showModal();
-    });
-}
-
-// close btn handler
-closeModalDialogEl.addEventListener("click", (event) =>
-  modalCloseHandler(event, ["ION-ICON"])
-);
-
-// backdrop close handler
-modalDialogEl.addEventListener("click", (event) =>
-  modalCloseHandler(event, ["DIALOG"])
-);
-
-function modalCloseHandler(event, nodeName) {
-  if (nodeName.includes(event.target.nodeName)) {
-    modalImgEl.src = "";
-    modalDialogEl.close();
-  }
-}
